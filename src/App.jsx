@@ -2,7 +2,7 @@ import React, { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, ContactShadows, Float } from '@react-three/drei';
 import Crystal from './components/Crystal';
-import Base from './components/Base'; // We'll create this next
+// import Base from './components/Base'; // We'll create this next
 import { useImageProcessor } from './hooks/useImageProcessor';
 import './App.css';
 
@@ -59,7 +59,6 @@ function App() {
             <Crystal shape={shape} imageUrl={image} />
           </Float>
 
-          <Base /> {/* This is the LED light stand */}
         </Suspense>
 
         <ContactShadows position={[0, -1.5, 0]} opacity={0.4} scale={10} blur={2} far={4} />

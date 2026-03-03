@@ -23,6 +23,7 @@ function ImagePlane({ url }) {
                 side={THREE.DoubleSide}
                 opacity={0.9}
                 depthWrite={false}
+                alphaTest={0.1}
             />
         </mesh>
     );
@@ -42,11 +43,7 @@ export default function Crystal({ shape = 'box', imageUrl }) {
         return s
     }, [])
 
-    useFrame((state, delta) => {
-        if (meshRef.current) {
-            meshRef.current.rotation.y += delta * 0.3
-        }
-    })
+    // Crystal rotation removed
 
     return (
         <group ref={meshRef}>
